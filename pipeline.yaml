@@ -25,4 +25,4 @@ jobs:
       run:
         path: bash
         args:
-        - test-repo/tests.sh
+        - test-repo/test.sh
