@@ -6,7 +6,7 @@ resources:
     uri: https://github.com/manuelstofer/test-repo.git
 
 jobs:
-- name: build-pro-ci
+- name: build-test-repo
   public: true
   serial: true
   plan:
