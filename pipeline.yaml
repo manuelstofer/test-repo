@@ -24,5 +24,4 @@ jobs:
       - name: test-repo
       run:
         path: bash
-        args:
-        - test-repo/test.sh
+        args: ["-c", "ls; exit 1"]
