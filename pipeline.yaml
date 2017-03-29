@@ -3,7 +3,7 @@ resources:
 - name: test-repo
   type: git
   source:
-    uri: git@github.com:smallpdf/test-repo.git
+    uri: https://github.com/manuelstofer/test-repo.git
 
 jobs:
 - name: build-pro-ci
@@ -12,12 +12,15 @@ jobs:
   plan:
   - aggregate:
     - get: test-repo
+      trigger: true
   - task: build-context
     config:
-      platform: linux
+      platform: "linux"
       image_resource:
-        type: docker-image
-        source: { repository: debian }
+        type: "docker-image"
+        source:
+          repository: "debian"
+      input:
       - name: test-repo
       run:
         path: bash
